@@ -600,6 +600,7 @@ html {
   .page .intro {
     margin-bottom: 10.4vw;
     font-size: 4.4vw;
+    line-height: 4.948vw;
   }
 }
 
@@ -709,7 +710,8 @@ html {
 @media screen and (max-width: 768px) {
   .page .nav__txt {
     margin-bottom: 0;
-    font-size: 3.6vw;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
   }
 }
 
@@ -723,6 +725,7 @@ html {
 @media screen and (max-width: 768px) {
   .page .nav__products {
     font-size: 4.7vw;
+    line-height: 4.2vw;
   }
 }
 
@@ -1153,9 +1156,19 @@ html {
 
 @media screen and (max-width: 768px) {
   .page .slider {
-    display: block;
-    position: relative;
-    margin-bottom: 6.5vw;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-y: hidden;
+    display: -webkit-box;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    -webkit-box-pack: start;
+    /* Firefox */
+  }
+  .page .slider::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
   }
 }
 
@@ -1167,9 +1180,12 @@ html {
 
 @media screen and (max-width: 768px) {
   .page .slider li {
-    padding: 0 2.5vw 0 2vw;
-    width: 40.4vw;
-    margin: 0;
+    width: 100%;
+    max-width: 49.516vw;
+    margin-right: 0;
+    margin: 0 7.8vw;
+    margin-left: 0;
+    margin-top: 0 !important;
   }
 }
 

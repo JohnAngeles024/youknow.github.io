@@ -96,6 +96,7 @@ html{
 		@include mq{
 			margin-bottom: vw(80);
 			font-size: vw(34);
+			line-height: 4.948vw;
 		}
 		span{
 			color: #F26C0D;
@@ -183,7 +184,8 @@ html{
 			line-height: 13px;
 			@include mq{
 				margin-bottom: 0;
-				font-size: vw(28);
+				font-size: vw(13);
+				line-height: vw(13);
 			}
 		}
 		&__products{
@@ -193,6 +195,7 @@ html{
 			line-height: 32px;
 			@include mq{
 				font-size: vw(36);
+				line-height: vw(32);
 			}
 		}
 	}
@@ -496,18 +499,36 @@ html{
 		justify-content: center;
 		margin-bottom: 50px;
 		@include mq{
-			display: block;
-			position: relative;
-			margin-bottom: vw(50);
+			// display: block;
+			// position: relative;
+			// margin-bottom: vw(50);
+		
+                    flex-wrap: nowrap;
+                    overflow-y: hidden;
+                    display: -webkit-box;
+                    -ms-overflow-style: none;
+                    /* Internet Explorer 10+ */
+                    scrollbar-width: none;
+                    -webkit-box-pack: start;
+
+                    /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none;
+                        /* Safari and Chrome */
+                    }
+                
 		}
 		li{
 			width: 230px;
 			height: auto;
 			margin-right: 20px;
 			@include mq{
-				padding: vw(0 19 0 15);
-				width: vw(310);
-				margin: 0;
+				width: 100%;
+				max-width: 49.516vw;
+				margin-right: 0;
+				margin: vw(0 60);
+				margin-left: 0;
+				margin-top: 0 !important;
 			}
 			&:nth-last-of-type(1),&:nth-last-of-type(2),&:nth-last-of-type(3),&:nth-last-of-type(4){
 				margin-bottom: 0;
