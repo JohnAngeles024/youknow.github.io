@@ -1,0 +1,35 @@
+@charset "UTF-8";
+//--------------------------------------
+//　　　変数の定義
+//--------------------------------------
+
+// PCコンテンツ幅
+$contentWidth: 980;
+
+// スマホ画面幅(デザインデータ)
+$spPageWidth: 768;
+
+// メディアクエリ
+$screen: (
+	'sp': 'screen and (max-width: 768px)',
+	'pc' : 'screen and (min-width: 769px)',
+	'spc' : 'screen and (min-width: #{$spPageWidth +1}px) and (max-width: 1180px)',
+	'tb' : 'screen and (min-width: #{$spPageWidth +1}px) and (max-width: 768px)',
+) !default;
+
+// カラー設定 
+
+// フォント設定
+// @mixin enFont {
+//     font-family: 'Lato', -apple-system, BlinkMacSystemFont,'Helvetica Neue','Helvetica','Arial',sans-serif;
+//     font-feature-settings: "palt";
+//     letter-spacing: 0.01em;
+//     @content;
+// }
+@mixin jaFont {
+    font-family: 'Noto Sans JP','ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',"游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",'メイリオ', 'Meiryo',"sans-serif";
+    font-feature-settings: "palt";
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    @content;
+}
