@@ -4,150 +4,182 @@
 // コンテンツ
 // --------------------------------
 
-html{
+html {
 	font-size: 62.5%;
 }
+
 *:focus {
 	outline: none;
-	}
-.page{
+}
+
+.page {
 	@include jaFont;
 	background-color: #fff;
 	color: #333;
+
 	// --------------------------------
 	// common
 	// --------------------------------
-	img{
+	img {
 		width: 100%;
 		height: auto;
 	}
-	.pc{
+
+	.pc {
 		display: block;
-		@include mq{
+
+		@include mq {
 			display: none;
 		}
 	}
-	.sp{
+
+	.sp {
 		display: none;
-		@include mq{
+
+		@include mq {
 			display: block;
 		}
 	}
-	.sct-wrap{
+
+	.sct-wrap {
 		padding-bottom: 80px;
-		@include mq{
-			padding-bottom: vw(100);
+
+		@include mq {
+			padding-bottom: vw(96);
 		}
-		&--last{
+
+		&--last {
 			padding-bottom: 120px;
-			@include mq{
+
+			@include mq {
 				padding-bottom: vw(120);
 			}
 		}
 	}
-	.sct-inr{
+
+	.sct-inr {
 		width: 980px;
 		height: auto;
 		margin: -150px auto 0;
 		padding-top: 150px;
-		@include mq{
-			width: vw(688);
-			margin-top: vw(-200);
-			padding-top: vw(200);
+
+		@include mq {
+			width: 100%;
+			margin-top: vw(0);
+			padding-top: vw(0);
 		}
 	}
+
 	// --------------------------------
 	// /common
 	// --------------------------------
 	// --------------------------------
 	// kv
 	// --------------------------------
-	.kv{
+	.kv {
 		display: block;
-		width:100%;
-		height:500px;
+		width: 100%;
+		height: 500px;
 		margin-bottom: 70px;
-		background: url("../image/kv-pc.png"),#65aadd;
-		background-size:auto ;
+		background: url("../image/kv-pc.png"), #65aadd;
+		background-size: auto;
 		background-position: top center;
 		background-repeat: no-repeat;
-		@include mq{
-			background-size:cover ;
-			height:vw(768);
-			margin-bottom: vw(80);
-			background-image: url("../image/kv-sp.png");
+
+		@include mq {
+			background-size: cover;
+			height: vw(977);
+			margin-bottom: vw(100);
+			background-image: url("../image/youknow-kv-sp.png");
 		}
-		span{
+
+		span {
 			display: none;
 		}
 	}
+
 	// --------------------------------
 	// /kv
 	// --------------------------------
 	// --------------------------------
 	// intro
 	// --------------------------------
-	.intro{
-	    margin-bottom: 74px;
+	.intro {
+		margin-bottom: 74px;
 		font-size: 21px;
 		text-align: center;
 		line-height: 38px;
 		letter-spacing: 0;
-		@include mq{
-			margin-bottom: vw(80);
-			font-size: vw(34);
-			line-height: 4.948vw;
+
+		@include mq {
+			margin-bottom: vw(95);
+			font-size: vw(30);
+			line-height: vw(54);
 		}
-		span{
+
+		span {
 			color: #F26C0D;
 			font-weight: 700;
 			vertical-align: top;
-			// @include mq{
-			// 	border-bottom: dashed 1px #F26C0D;
-			// }
 		}
 	}
+
 	// --------------------------------
 	// /intro
 	// --------------------------------
 	// --------------------------------
 	// nav
 	// --------------------------------
-	.nav{
+	.nav {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		width: 980px;
 		height: auto;
 		margin: 0 auto;
-		@include mq{
+
+		@include mq {
 			display: block;
-			width: 100%;
+			width: vw(688);
 		}
-		&__list{
+
+		&__list {
 			position: relative;
 			width: 31.6%;
 			text-align: center;
 			border: 1px solid #985A33;
 			margin: 0 25px 25px 0;
-			&:nth-child(n+4){
+
+			&:nth-child(n+4) {
 				margin-bottom: 0;
 			}
 
-			&:nth-child(3n+3){
+			&:nth-child(3n+3) {
 				margin-right: 0;
 			}
-			@include mq{
+
+			@include mq {
 				width: 100%;
+				margin-bottom: vw(24);
+
+				&:nth-child(n+4) {
+					margin-bottom: vw(24);
+				}
+
+				&:nth-child(5) {
+					margin-bottom: 0;
+				}
 			}
 
-			a{
+			a {
 				padding: 20px 0 42px 0;
-				@include mq{
+
+				@include mq {
 					padding: vw(27 0 28 0);
 				}
 			}
-			&::after{
+
+			&::after {
 				position: absolute;
 				bottom: 20px;
 				left: 50%;
@@ -158,7 +190,8 @@ html{
 				transform: rotate(45deg) translateX(-50%);
 				content: "";
 				pointer-events: none;
-				@include mq{
+
+				@include mq {
 					top: 50%;
 					right: vw(40);
 					bottom: auto;
@@ -168,121 +201,160 @@ html{
 					transform: rotate(45deg) translateY(-50%);
 				}
 			}
-			&:hover{
+
+			&:hover {
 				opacity: 0.9;
 			}
 		}
-		a{
+
+		a {
 			display: block;
 			width: 100%;
 			height: 100%;
 		}
-		&__txt{
+
+		&__txt {
 			margin-bottom: 5px;
 			color: #985A33;
 			font-size: 13px;
 			line-height: 13px;
-			@include mq{
+
+			@include mq {
 				margin-bottom: 0;
-				font-size: vw(13);
-				line-height: vw(13);
+				font-size: vw(21);
+				line-height: vw(28);
 			}
 		}
-		&__products{
+
+		&__products {
 			color: #985A33;
 			font-size: 21px;
 			font-weight: 700;
 			line-height: 32px;
-			@include mq{
-				font-size: vw(36);
-				line-height: vw(32);
+
+			@include mq {
+				font-size: vw(30);
+				line-height: vw(45);
 			}
 		}
 	}
+
 	// --------------------------------
 	// /nav
 	// --------------------------------
 	// --------------------------------
 	// solution
 	// --------------------------------
-	.solution{
-		&__subheading{
+	.solution {
+		&__subheading {
 			margin-bottom: 30px;
 			font-size: 20px;
 			line-height: 1.6;
 			text-align: center;
-			@include mq{
+
+			@include mq {
 				margin-bottom: vw(30);
 				font-size: vw(34);
 			}
 		}
-		&__heading{
+
+		&__heading {
 			width: 350px;
 			margin: 0 auto 32px;
-			@include mq{
+
+			@include mq {
 				width: vw(437);
 				margin: vw(0 auto 40);
 			}
 		}
-		&__img{
+
+		&__img {
 			width: 980px;
 			margin: 0px auto 35px;
-			@include mq{
+
+			@include mq {
 				width: 100%;
-				margin: vw(0 auto 44);
+				margin: vw(0 auto 55);
 			}
 		}
-		&__lead{
+
+		&__lead {
 			font-size: 36px;
 			margin-bottom: 20px;
 			line-height: 54px;
 			text-align: center;
 			color: #F26C0D;
-			@include mq{
+
+			@include mq {
 				font-size: vw(40);
+				line-height: vw(60);
+				margin-bottom: vw(41);
+
 			}
 		}
-		&__text{
+
+		&__text {
 			text-align: center;
 			font-size: 16px;
 			line-height: 24px;
 			color: #333333;
+
+			@include mq {
+				text-align: left;
+				font-size: vw(26);
+				line-height: vw(39);
+				width: vw(688);
+				margin: auto;
+			}
 		}
-		&__icon{
+
+		&__icon {
 			width: 396px;
 			font-size: 13px;
 			line-height: 1.2;
-			margin:20px 0;
+			margin: 20px 0;
 			display: flex;
 			align-items: center;
-			@include mq{
+
+			@include mq {
 				width: 70%;
 				font-size: vw(26);
-				margin:vw(30 auto);
+				margin: vw(30 auto);
 			}
-			.icon_img{
+
+			.icon_img {
 				width: 60px;
 				margin-right: 24px;
-				@include mq{
-					width:30%;
-					margin-right: vw(10);
+
+				@include mq {
+					width: 30%;
+					margin-right: vw(40);
+					height: vw(111);
+					width: vw(90);
 				}
 			}
-			.icon_txt{
+
+			.icon_txt {
 				width: auto;
 				line-height: 20px;
-				@include mq{
-					width:69%;
+
+				@include mq {
+					width: 69%;
+					font-size: vw(21);
+					line-height: vw(32);
 				}
 			}
 		}
-		&__icon.icon_center{
+
+		&__icon.icon_center {
 			margin: 30px auto;
-			@include mq{
-				margin:vw(30 auto);
+
+			@include mq {
+				margin: vw(30 auto);
 			}
 		}
-		&__btn{
+
+		&__btn {
 			display: block;
 			position: relative;
 			width: 440px;
@@ -292,12 +364,14 @@ html{
 			font-weight: 400;
 			text-align: center;
 			line-height: 50px;
-			@include mq{
-				width: vw(434);
+
+			@include mq {
+				width: vw(688);
 				font-size: vw(22);
 				line-height: vw(81);
 			}
-			&::after{
+
+			&::after {
 				position: absolute;
 				top: 0;
 				right: 21px;
@@ -307,7 +381,8 @@ html{
 				margin: auto;
 				transform: rotate(45deg);
 				content: "";
-				@include mq{
+
+				@include mq {
 					top: 0;
 					right: vw(33);
 					bottom: 0;
@@ -315,247 +390,342 @@ html{
 					height: vw(13);
 				}
 			}
-			&:hover{
+
+			&:hover {
 				color: #fff;
-				&::after{
+
+				&::after {
 					border-top: solid 1px #fff;
 					border-right: solid 1px #fff;
 				}
 			}
-			&--brown{
+
+			&--brown {
 				border: solid 1px #985A33;
 				color: #985A33;
-				&::after{
+
+				&::after {
 					border-top: solid 1px #985A33;
 					border-right: solid 1px #985A33;
 				}
-				&:hover{
+
+				&:hover {
 					background: #985A33;
 				}
 			}
 		}
-		&__func{
+
+		&__func {
 			width: 980px;
-			margin: 60px auto 30px;
+			margin: 60px auto 40px;
 			padding: 39px 40px 39px 40px;
 			background: #F7E7CD;
-			@include mq(){
+
+			@include mq() {
 				width: vw(688);
-				margin: vw(50 auto 30);
+				margin: vw(56 auto 0);
+				padding: vw(44 56 56 56)
 			}
-			ul{
+
+			ul {
 				display: flex;
 				justify-content: space-between;
-				@include mq(){
+
+				@include mq() {
 					display: block;
 				}
-				li{
-					@include mq(){
-						margin: vw(40 0 0 0);
-						&:first-child{
+
+				li {
+					@include mq() {
+						margin: vw(56 0 0 0);
+
+						&:first-child {
 							margin-top: 0;
 						}
 					}
 				}
 			}
-			&--1{
-				ul{
+
+			&--1 {
+				ul {
 					display: block;
 					justify-content: space-between;
-					li{
+
+					li {
 						width: 456px;
 						margin: auto;
-						@include mq(){
+
+						@include mq() {
 							width: 100%;
 						}
 					}
 				}
 			}
-			&--2{
-				li{
+
+			&--2 {
+				li {
 					width: 47.78%;
-					@include mq(){
+
+					@include mq() {
 						width: 100%;
 					}
 
-					.solution__func__desc{
+					.solution__func__desc {
 						text-align: left;
 					}
 				}
-				
+
 			}
-			&--3{
-				padding:  40px  75px 39px 75px;
-				li{
-					width: 26.56%;
+
+			&--3 {
+				padding: 40px 75px 39px 75px;
+
+				@include mq(){
+					padding: vw(44 56 56 56)
+				}
+				ul {
 					@include mq(){
-						width: 100%;
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
+				li {
+					width: 26.56%;
+					@include mq() {
+						width: vw(260);
+						&:nth-child(2) {
+							margin-top: 0;
+						}
 					}
 				}
-				
 			}
-			&__tit{
+			.solution__func__desc {
+				p{
+					@include mq(){
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			}
+
+			&__tit {
 				text-align: center;
-				h4{
+
+				h4 {
 					color: #F26C0D;
 					font-size: 21px;
 					margin: 0 0 8px;
-					@include mq(){
-						font-size: vw(26);
-						margin: vw(0 0 10);
+
+					@include mq() {
+						font-size: vw(32);
+						line-height: vw(48);
+						margin: vw(0);
 					}
 				}
-				p{
+
+				p {
 					font-size: 20px;
 					line-height: 1.5;
-					@include mq(){
+
+					@include mq() {
 						font-size: vw(34);
 					}
 				}
 			}
 
-			&__desc{
+			&__desc {
 				margin: 25px 0 0;
 				text-align: center;
-				@include mq(){
-					margin: vw(20 0 0);
+
+				@include mq() {
+					margin: vw(30 0 0);
 				}
-				p{
+
+				p {
 					margin: 16px 0 0;
 					font-size: 16px;
-					@include mq(){
-						font-size: vw(24);
-						margin: vw(12 0 0);
+
+					@include mq() {
+						font-size: vw(26);
+						line-height: vw(39);
+						margin: vw(32 0);
+						text-align: left;
+					}
+				}
+
+				span {
+					font-size: 16px;
+
+					@include mq() {
+						font-size: vw(21);
+						line-height: vw(32);
 					}
 				}
 			}
 		}
 	}
-	.solution-flex{
+
+	.solution-flex {
 		display: flex;
 		align-items: center;
 		width: 980px;
 		height: auto;
 		margin: 0 auto;
-		@include mq{
+
+		@include mq {
 			display: block;
 			width: vw(688);
 		}
-		&--reverse{
+
+		&--reverse {
 			flex-direction: row-reverse;
-			@include mq{
+
+			@include mq {
 				display: block;
 			}
 		}
-		&__img{
+
+		&__img {
 			width: 560px;
 			height: auto;
-			@include mq{
+
+			@include mq {
 				width: vw(688);
 				margin-bottom: vw(34);
 			}
 		}
-		&__txtarea{
+
+		&__txtarea {
 			margin-left: -70px;
-			@include mq{
+
+			@include mq {
 				margin: 0;
 			}
-			&--left{
+
+			&--left {
 				margin-left: auto;
 				margin-right: -70px;
-				@include mq{
+
+				@include mq {
 					margin: 0;
 				}
 			}
 		}
-		&__heading{
+
+		&__heading {
 			margin-bottom: 20px;
 			font-size: 30px;
 			font-weight: 700;
-			@include mq{
+
+			@include mq {
 				margin-bottom: vw(30);
 				font-size: vw(44);
 				text-align: center;
 			}
-			&--lightblue{
+
+			&--lightblue {
 				color: #6BAFE0;
 			}
-			&--blue{
+
+			&--blue {
 				color: #538DD1;
 			}
 		}
-		&__lead{
+
+		&__lead {
 			font-size: 26px;
 			line-height: 1.6;
-			@include mq{
+
+			@include mq {
 				font-size: vw(40);
 				text-align: center;
 			}
 		}
 	}
-	.slider{
+
+	.main {
+		@include mq() {
+			width: vw(688);
+			margin: auto;
+		}
+	}
+
+	.slider {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-bottom: 50px;
-		@include mq{
-			// display: block;
-			// position: relative;
-			// margin-bottom: vw(50);
-		
-                    flex-wrap: nowrap;
-                    overflow-y: hidden;
-                    display: -webkit-box;
-                    -ms-overflow-style: none;
-                    /* Internet Explorer 10+ */
-                    scrollbar-width: none;
-                    -webkit-box-pack: start;
+		margin-bottom: 40px;
 
-                    /* Firefox */
-                    &::-webkit-scrollbar {
-                        display: none;
-                        /* Safari and Chrome */
-                    }
-                
+		@include mq {
+			margin: vw(56 auto);
+			flex-wrap: nowrap;
+			overflow-y: hidden;
+			display: -webkit-box;
+			-ms-overflow-style: none;
+			/* Internet Explorer 10+ */
+			scrollbar-width: none;
+			-webkit-box-pack: start;
+
+			/* Firefox */
+			&::-webkit-scrollbar {
+				display: none;
+				/* Safari and Chrome */
+			}
+
 		}
-		li{
+
+		li {
 			width: 230px;
 			height: auto;
 			margin-right: 20px;
-			@include mq{
+
+			@include mq {
 				width: 100%;
-				max-width: 49.516vw;
+				max-width: vw(488);
 				margin-right: 0;
-				margin: vw(0 60);
+				margin: vw(0 56);
 				margin-left: 0;
 				margin-top: 0 !important;
 			}
-			&:nth-last-of-type(1),&:nth-last-of-type(2),&:nth-last-of-type(3),&:nth-last-of-type(4){
+
+			&:nth-last-of-type(1),
+			&:nth-last-of-type(2),
+			&:nth-last-of-type(3),
+			&:nth-last-of-type(4) {
 				margin-bottom: 0;
 			}
-			&:nth-of-type(4n){
+
+			&:nth-of-type(4n) {
 				margin-right: 0;
 			}
 		}
-		&__products{
+
+		&__products {
 			font-size: 16px;
 			font-weight: 400;
 			text-align: center;
-			@include mq{
-				font-size: vw(24);
+
+			@include mq {
+				font-size: vw(28);
+				line-height: vw(42);
 			}
 		}
 	}
-	.lineup__content__list__box{
+
+	.lineup__content__list__box {
 		margin-bottom: 40px;
-		@include mq{
+
+		@include mq {
 			margin-bottom: vw(40);
 		}
-		a{
+
+		a {
 			display: block;
 			// margin-bottom: 17px;
 			margin-bottom: 7px;
-			@include mq{
+
+			@include mq {
 				// width: vw(252);
 				width: 100%;
 				// margin: 0 auto;
@@ -563,26 +733,29 @@ html{
 			}
 		}
 	}
-	.slide-arrow{
+
+	.slide-arrow {
 		position: absolute;
 		top: vw(195);
 		z-index: 50;
 		width: vw(14);
 		height: vw(28);
-		&.prev-arrow{
+
+		&.prev-arrow {
 			left: 0;
 		}
-		&.next-arrow{
+
+		&.next-arrow {
 			right: 0;
 		}
 	}
-	.reservation{
-		.btn{
+
+	.reservation {
+		.btn {
 			display: block;
 			position: relative;
 			width: 100%;
-			// margin: 10px auto 0;
-			margin:0 auto;
+			margin: 0 auto;
 			padding: 7px 0 9px;
 			border-radius: 5px;
 			color: #fff;
@@ -590,24 +763,27 @@ html{
 			font-weight: 400;
 			text-align: center;
 			line-height: 1;
-			@include mq{
+
+			@include mq {
 				padding: vw(24 0 25);
-				// margin: vw(9 auto 0);
-				margin:vw(0 auto 0);
+				margin: vw(0 auto 0);
 				font-size: vw(22);
 			}
-			&--brown{
+
+			&--brown {
 				border: solid 1px #985A33;
 				background-color: #985A33;
 			}
-			
+
 		}
-		.arrow_right{
+
+		.arrow_right {
 			position: absolute;
 			top: 43%;
 			right: 6%;
 			transform: translateY(-50%);
-			&::after{
+
+			&::after {
 				content: "";
 				display: inline-block;
 				width: 0.5em;
@@ -618,31 +794,37 @@ html{
 			}
 		}
 	}
+
 	// --------------------------------
 	// /solution
 	// --------------------------------
 	// --------------------------------
 	// bnr
 	// --------------------------------
-	.bnr{
+	.bnr {
 		padding-bottom: 65px;
-		@include mq{
+
+		@include mq {
 			padding-bottom: vw(85);
 		}
-		a{
+
+		a {
 			display: block;
 			width: 688px;
 			height: auto;
 			margin: 0 auto 40px;
-			@include mq{
+
+			@include mq {
 				width: vw(688);
 				margin: vw(0 auto 40);
 			}
-			&:last-of-type{
+
+			&:last-of-type {
 				margin: 0 auto;
 			}
 		}
 	}
+
 	// --------------------------------
 	// /bnr
 	// --------------------------------
