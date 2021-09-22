@@ -8,6 +8,10 @@ html {
 	font-size: 62.5%;
 }
 
+body {
+	margin: 0;
+}
+
 *:focus {
 	outline: none;
 }
@@ -16,6 +20,7 @@ html {
 	@include jaFont;
 	background-color: #fff;
 	color: #333;
+	font-family: Hiragino Kaku Gothic ProN;
 
 	// --------------------------------
 	// common
@@ -81,7 +86,7 @@ html {
 		width: 100%;
 		height: 500px;
 		margin-bottom: 70px;
-		background: url("../image/kv-pc.png"), #65aadd;
+		background: url("../image/kv-pc.png"), #985A33;
 		background-size: auto;
 		background-position: top center;
 		background-repeat: no-repeat;
@@ -110,6 +115,7 @@ html {
 		text-align: center;
 		line-height: 38px;
 		letter-spacing: 0;
+		font-family: ヒラギノ角ゴ ProN W3;
 
 		@include mq {
 			margin-bottom: vw(95);
@@ -121,6 +127,7 @@ html {
 			color: #F26C0D;
 			font-weight: 700;
 			vertical-align: top;
+			font-family: Hiragino Kaku Gothic ProN;
 		}
 	}
 
@@ -160,6 +167,7 @@ html {
 
 			@include mq {
 				width: 100%;
+				height: vw(137);
 				margin-bottom: vw(24);
 
 				&:nth-child(n+4) {
@@ -175,7 +183,7 @@ html {
 				padding: 20px 0 42px 0;
 
 				@include mq {
-					padding: vw(27 0 28 0);
+					padding: vw(34 0 34 0);
 				}
 			}
 
@@ -185,8 +193,8 @@ html {
 				left: 50%;
 				width: 10px;
 				height: 10px;
-				border-right: solid 1px #985A33;
-				border-bottom: solid 1px #985A33;
+				border-right: solid 2px #985A33;
+				border-bottom: solid 2px #985A33;
 				transform: rotate(45deg) translateX(-50%);
 				content: "";
 				pointer-events: none;
@@ -196,6 +204,8 @@ html {
 					right: vw(40);
 					bottom: auto;
 					left: auto;
+					border-right: solid vw(2px) #985A33;
+					border-bottom: solid vw(2px) #985A33;
 					width: vw(20);
 					height: vw(20);
 					transform: rotate(45deg) translateY(-50%);
@@ -299,6 +309,7 @@ html {
 			line-height: 24px;
 			color: #333333;
 
+
 			@include mq {
 				text-align: left;
 				font-size: vw(26);
@@ -309,12 +320,13 @@ html {
 		}
 
 		&__icon {
-			width: 396px;
+			width: auto;
 			font-size: 13px;
 			line-height: 1.2;
 			margin: 20px 0;
 			display: flex;
 			align-items: center;
+			justify-content: center;
 
 			@include mq {
 				width: 70%;
@@ -337,6 +349,7 @@ html {
 			.icon_txt {
 				width: auto;
 				line-height: 20px;
+				font-family: ヒラギノ角ゴ ProN W3;
 
 				@include mq {
 					width: 69%;
@@ -350,7 +363,7 @@ html {
 			margin: 30px auto;
 
 			@include mq {
-				margin: vw(30 auto);
+				margin: vw(56 auto);
 			}
 		}
 
@@ -363,7 +376,8 @@ html {
 			font-size: 14px;
 			font-weight: 400;
 			text-align: center;
-			line-height: 50px;
+			line-height: 46px;
+			font-family: Noto Sans JP;
 
 			@include mq {
 				width: vw(688);
@@ -395,8 +409,8 @@ html {
 				color: #fff;
 
 				&::after {
-					border-top: solid 1px #fff;
-					border-right: solid 1px #fff;
+					border-top: solid 2px #fff;
+					border-right: solid 2px #fff;
 				}
 			}
 
@@ -405,8 +419,8 @@ html {
 				color: #985A33;
 
 				&::after {
-					border-top: solid 1px #985A33;
-					border-right: solid 1px #985A33;
+					border-top: solid 2px #985A33;
+					border-right: solid 2px #985A33;
 				}
 
 				&:hover {
@@ -424,7 +438,7 @@ html {
 			@include mq() {
 				width: vw(688);
 				margin: vw(56 auto 0);
-				padding: vw(44 56 56 56)
+				padding: vw(44 51 56 51)
 			}
 
 			ul {
@@ -472,40 +486,62 @@ html {
 
 					.solution__func__desc {
 						text-align: left;
+
+						p {
+							margin-bottom: 20px;
+
+							@include mq() {
+								margin-bottom: vw(32);
+							}
+						}
 					}
 				}
 
 			}
 
 			&--3 {
-				padding: 40px 75px 39px 75px;
 
-				@include mq(){
+				@include mq() {
 					padding: vw(44 56 56 56)
 				}
+
 				ul {
-					@include mq(){
+					@include mq() {
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
 					}
-				li {
-					width: 26.56%;
-					@include mq() {
-						width: vw(260);
-						&:nth-child(2) {
-							margin-top: 0;
+
+					li {
+						width: 28.56%;
+
+						@include mq() {
+							width: vw(260);
+
+							&:nth-child(2) {
+								margin-top: 0;
+							}
 						}
 					}
 				}
-			}
-			.solution__func__desc {
-				p{
-					@include mq(){
-						margin-bottom: 0;
+
+				.solution__func__desc {
+					img {
+						width: 203px;
+						height: 140px;
+
+						@include mq() {
+							width: vw(203);
+							height: vw(140);
+						}
+					}
+
+					p {
+						@include mq() {
+							margin-bottom: 0;
+						}
 					}
 				}
-			}
 
 			}
 
@@ -515,7 +551,7 @@ html {
 				h4 {
 					color: #F26C0D;
 					font-size: 21px;
-					margin: 0 0 8px;
+					margin: 0 0 20px;
 
 					@include mq() {
 						font-size: vw(32);
@@ -530,12 +566,12 @@ html {
 
 					@include mq() {
 						font-size: vw(34);
+
 					}
 				}
 			}
 
 			&__desc {
-				margin: 25px 0 0;
 				text-align: center;
 
 				@include mq() {
@@ -655,7 +691,7 @@ html {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-bottom: 40px;
+		margin-bottom: 23px;
 
 		@include mq {
 			margin: vw(56 auto);
@@ -680,6 +716,7 @@ html {
 			height: auto;
 			margin-right: 20px;
 
+
 			@include mq {
 				width: 100%;
 				max-width: vw(488);
@@ -699,12 +736,106 @@ html {
 			&:nth-of-type(4n) {
 				margin-right: 0;
 			}
+
+
+
+			.ajax_area>.preset_price_area {
+				font-family: "Hiragino Kaku Gothic ProN";
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 3px;
+				text-align: center;
+
+				@include mq {
+					font-size: 3.125vw;
+					line-height: 4.6875vw;
+					margin-bottom: 2.604166666666667vw;
+				}
+			}
+
+
+			.ajax_area>.stock_exist {
+				width: 190px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				height: 36px;
+				margin-right: auto;
+				margin-left: auto;
+				text-align: left;
+				padding: 0.7rem;
+				margin-bottom: 10px;
+				color: #333333;
+				font-family: "Noto Sans JP";
+				font-size: 14px;
+
+				span {
+					color: #333333;
+					font-family: "Noto Sans JP";
+					font-size: 14px;
+				}
+
+				@include mq {
+					width: vw(368);
+					height: vw(70);
+					padding: 2vw;
+					line-height: vw(85);
+					font-size: vw(24);
+					margin-bottom: vw(20);
+
+					&::before {
+						border: 1.651vw solid transparent;
+						border-bottom: 1.651vw solid #444;
+					}
+
+					&::after {
+						border: 1.651vw solid transparent;
+						border-top: 1.651vw solid #444;
+					}
+				}
+			}
+
+
+
+			.ajax_area>a.cartinbtn {
+				width: 190px;
+				height: 36px;
+				background: #985A33;
+				margin: auto;
+				padding: 0.7rem;
+				cursor: pointer;
+				font-family: 'Noto Sans JP';
+				font-size: 14px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				border-radius: 5px;
+
+				&:hover {
+					opacity: 0.7;
+					transition: all ease 0.2s;
+					cursor: pointer;
+				}
+
+				@include mq {
+					width: vw(368);
+					height: vw(70);
+					padding: 3vw 0;
+					font-size: vw(26);
+					line-height: vw(85);
+					border-radius: vw(5);
+					background: #985A33;
+				}
+			}
+
+
 		}
 
 		&__products {
 			font-size: 16px;
 			font-weight: 400;
 			text-align: center;
+			font-family: Hiragino Kaku Gothic ProN;
 
 			@include mq {
 				font-size: vw(28);
@@ -752,27 +883,43 @@ html {
 
 	.reservation {
 		.btn {
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			position: relative;
 			width: 100%;
 			margin: 0 auto;
-			padding: 7px 0 9px;
+			padding-top: 3px;
 			border-radius: 5px;
-			color: #fff;
+			color: #985A33;
 			font-size: 14px;
 			font-weight: 400;
+			font-family: Noto Sans JP;
 			text-align: center;
-			line-height: 1;
+			line-height: 46px;
 
-			@include mq {
-				padding: vw(24 0 25);
-				margin: vw(0 auto 0);
-				font-size: vw(22);
+			&::before {
+				content: '';
+				width: 23px;
+				height: 14px;
+				margin-right: 4px;
+				display: block;
+				background-image: url('../image/hanger_icon.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				@include mq() {
+					width: vw(44);
+					height: vw(26);
+					margin-right: vw(8);
+				}
 			}
 
-			&--brown {
-				border: solid 1px #985A33;
-				background-color: #985A33;
+			@include mq {
+				padding: vw(32 0 0);
+				margin: vw(0 auto 0);
+				font-size: vw(26);
 			}
 
 		}
