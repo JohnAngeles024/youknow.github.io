@@ -506,7 +506,6 @@ body {
   letter-spacing: 0.05em;
   background-color: #fff;
   color: #333;
-  font-family: Hiragino Kaku Gothic ProN;
 }
 
 .page img {
@@ -584,7 +583,7 @@ body {
   .page .kv {
     background-size: cover;
     height: 127.2vw;
-    margin-bottom: 13vw;
+    margin-bottom: 12.5vw;
     background-image: url("../image/youknow-kv-sp.png");
   }
 }
@@ -600,11 +599,12 @@ body {
   line-height: 38px;
   letter-spacing: 0;
   font-family: ヒラギノ角ゴ ProN W3;
+  color: #000000;
 }
 
 @media screen and (max-width: 768px) {
   .page .intro {
-    margin-bottom: 12.4vw;
+    margin-bottom: 12.5vw;
     font-size: 3.9vw;
     line-height: 7vw;
   }
@@ -614,7 +614,7 @@ body {
   color: #F26C0D;
   font-weight: 700;
   vertical-align: top;
-  font-family: Hiragino Kaku Gothic ProN;
+  font-family: Hiragino Kaku Gothic ProN W6;
 }
 
 .page .nav {
@@ -718,6 +718,7 @@ body {
 }
 
 .page .nav__txt {
+  font-family: Hiragino Kaku Gothic ProN W6;
   margin-bottom: 5px;
   color: #985A33;
   font-size: 13px;
@@ -733,6 +734,7 @@ body {
 }
 
 .page .nav__products {
+  font-family: Hiragino Kaku Gothic ProN W6;
   color: #985A33;
   font-size: 21px;
   font-weight: 700;
@@ -790,6 +792,7 @@ body {
   line-height: 54px;
   text-align: center;
   color: #F26C0D;
+  font-family: Hiragino Kaku Gothic ProN W6;
 }
 
 @media screen and (max-width: 768px) {
@@ -804,7 +807,9 @@ body {
   text-align: center;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0px;
   color: #333333;
+  font-family: ヒラギノ角ゴ ProN W3;
 }
 
 @media screen and (max-width: 768px) {
@@ -858,7 +863,7 @@ body {
 .page .solution__icon .icon_txt {
   width: auto;
   line-height: 20px;
-  font-family: ヒラギノ角ゴ ProN W3;
+  font-family: Hiragino Kaku Gothic ProN W6;
 }
 
 @media screen and (max-width: 768px) {
@@ -870,7 +875,7 @@ body {
 }
 
 .page .solution__icon.icon_center {
-  margin: 30px auto;
+  margin: 40px 0 auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -948,7 +953,7 @@ body {
 
 .page .solution__func {
   width: 980px;
-  margin: 60px auto 40px;
+  margin: 40px auto;
   padding: 39px 40px 39px 40px;
   background: #F7E7CD;
 }
@@ -1083,6 +1088,7 @@ body {
 }
 
 .page .solution__func__tit h4 {
+  font-family: Hiragino Kaku Gothic ProN W6;
   color: #F26C0D;
   font-size: 21px;
   margin: 0 0 20px;
@@ -1109,6 +1115,8 @@ body {
 
 .page .solution__func__desc {
   text-align: center;
+  font-family: ヒラギノ角ゴ ProN W3;
+  color: #000000;
 }
 
 @media screen and (max-width: 768px) {
@@ -1243,7 +1251,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .page .main {
-    width: 89.6vw;
+    width: 100vw;
     margin: auto;
   }
 }
@@ -1305,7 +1313,7 @@ body {
 }
 
 .page .slider li .ajax_area > .preset_price_area {
-  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "Hiragino Kaku Gothic ProN W6";
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 3px;
@@ -1411,7 +1419,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  font-family: Hiragino Kaku Gothic ProN;
+  font-family: Hiragino Kaku Gothic ProN W6;
 }
 
 @media screen and (max-width: 768px) {
@@ -1473,7 +1481,6 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 3px;
-  border-radius: 5px;
   color: #985A33;
   font-size: 14px;
   font-weight: 400;
@@ -1507,6 +1514,7 @@ body {
     padding: 4.2vw 0 0;
     margin: 0 auto 0;
     font-size: 3.4vw;
+    line-height: 11.1vw;
   }
 }
 
